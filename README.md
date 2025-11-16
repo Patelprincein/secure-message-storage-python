@@ -1,147 +1,156 @@
-CS2413 – Cryptography Assignment 1: Information Security
+### **CS2413 -- CRYPTOGRAPHY ASSIGNMENT 1: INFORMATION SECURITY**
 
-This repository contains my completed solutions for Programming Assignment 1 from the course CS2413 (Information Security).
 
-The project demonstrates practical applications of symmetric encryption (AES), asymmetric decryption (RSA), and cryptographic hashing (SHA-256, MD5). All three assignments are implemented in Python, and professor-provided files are included for immediate execution and verification.
 
-🚀 Repository Contents & Setup
+**========================================================**
 
-Key Files
 
-File Name
 
-Description
+This repository contains my completed solutions for Programming Assignment 1 from the course CS2413 (Information Security) at the University of New Brunswick.
 
-Category
 
-encryption_system.py
 
-Solution for Question 1 (AES Encryption).
+The project demonstrates practical applications of the following core concepts:
 
-Solution
 
-hash_checker.py
 
-Solution for Question 2 (SHA-256 Hash Check).
+**Symmetric Encryption (AES)**
 
-Solution
 
-rsa_decryption.py
 
-Solution for Question 3 (RSA OAEP Decryption).
+**Asymmetric Decryption (RSA)**
 
-Solution
 
-requirements.txt
 
-Python dependencies required to run the solutions.
+**Cryptographic Hashing (SHA-256, MD5)**
 
-Config
 
-private_key.pem
 
-Professor-provided file (used in Q2 and Q3).
+All three assignments are implemented in Python. Professor-provided resource files are included to ensure immediate execution and verification.
 
-Resource
 
-encrypted_message.txt
 
-Professor-provided file (ciphertext for Q3).
+**========================================================**
 
-Resource
 
-Programming_Assignment-1-Report.docx
 
-The formal assignment report.
+##### **REPOSITORY CONTENTS AND SETUP:**
 
-Documentation
 
-Installation
 
-To run the programs, you must first install the required Python libraries:
+###### The files are structured as follows:
+
+
+
+**encryption\_system.py (Solution Code):** Solution for Question 1 (AES Message Storage).
+
+**hash\_checker.py (Solution Code):** Solution for Question 2 (SHA-256 Hash Check).
+
+**rsa\_decryption.py (Solution Code):** Solution for Question 3 (RSA OAEP Decryption).
+
+**requirements.txt (Configuration):** Python dependencies required to run the solutions.
+
+**private\_key.pem (Resource):** Professor-provided RSA private key file.
+
+**encrypted\_message.txt (Resource):** Professor-provided Base64 ciphertext.
+
+**Programming\_Assignment-1-Report.docx (Documentation): The formal assignment.**
+
+
+
+**========================================================**
+
+
+
+##### **Installation Instructions:**
+
+
+
+To run the programs locally, you must install the required Python libraries:
+
+
 
 pip install -r requirements.txt
 
 
-💡 Assignment Solutions Overview
-
-Question 1: AES Message Storage
-
-This program, encryption_system.py, simulates a secure message storage system.
-
-It performs the following cryptographic steps:
-
-Generates an encryption key from the user's password using a cryptographic hash function (SHA-256 or MD5).
-
-Encrypts the secret message using the Advanced Encryption Standard (AES) in Cipher Block Chaining (CBC) mode.
-
-Ensures security by using a random Initialization Vector (IV) for every encryption.
-
-Saves the encrypted message and IV into a JSON file.
-
-Adds a hash of the ciphertext to the file to detect any unauthorized tampering (data integrity check).
-
-Allows the user to decrypt their message later using their password.
-
-To Run:
-
-python encryption_system.py
 
 
-Question 2: SHA-256 Hash Checker
 
-The program, hash_checker.py, verifies the integrity of the provided private key file.
-
-It reads the private_key.pem file.
-
-Calculates the SHA-256 hash of its contents.
-
-Compares the calculated hash against four hardcoded multiple-choice options.
-
-Prints the matching option to confirm the file's authenticity.
-
-To Run:
-
-python hash_checker.py
+**========================================================**
 
 
-Question 3: RSA OAEP Decryption
 
-This program, rsa_decryption.py, uses asymmetric cryptography to recover a secret message.
-
-It loads the private key from private_key.pem.
-
-Reads the Base64-encoded ciphertext from encrypted_message.txt.
-
-Decodes the Base64 ciphertext back into its binary form.
-
-Decrypts the binary data using RSA with the recommended Optimal Asymmetric Encryption Padding (OAEP) scheme.
-
-Prints the successfully decrypted original secret message.
-
-To Run:
-
-python rsa_decryption.py
+##### **ASSIGNMENT SOLUTIONS OVERVIEW**
 
 
-📚 Key Learning Outcomes
 
-This assignment provided hands-on experience with fundamental security concepts:
+**Question 1:** **AES Message Storage (encryption\_system.py)**
 
-Deepened understanding of AES symmetric encryption (CBC mode).
 
-Practical application of RSA OAEP asymmetric decryption.
 
-Implementing and utilizing various Hash Functions (SHA-256, MD5) for integrity checking and key generation.
+This program simulates a secure message storage system. Key generation from a user's password using SHA-256 or MD5. Encryption using AES in CBC mode. Use of a random Initialization Vector (IV) for every encryption. Data integrity check by adding a hash of the ciphertext upon saving. Decryption function to recover the message using the original password.
 
-Developing secure techniques for Password-Based Key Derivation.
 
-Working with common data encoding formats like JSON and Base64.
 
-Gaining insight into how real-world encryption systems structure and store data securely.
+**To Run:**
 
-🧑‍💻 Author & Course Information
+python encryption\_system.py
 
-Author: Prince Patel
+
+
+**========================================================**
+
+
+
+**Question 2: SHA-256 Hash Checker (hash\_checker.py)**
+
+This utility verifies the integrity of a critical resource file. Reads the private\_key.pem file. Calculates the SHA-256 hash of the file's contents. Compares the result to multiple-choice options for authenticity confirmation.
+
+
+
+**To Run:**
+
+python python hash\_checker.py
+
+
+
+**========================================================**
+
+
+
+**Question 3: RSA OAEP Decryption (rsa\_decryption.py):**
+
+This program demonstrates the use of asymmetric cryptography for message recovery. Loads the private key from private\_key.pem. Reads the Base64-encoded ciphertext from encrypted\_message.txt. Performs decryption using RSA with Optimal Asymmetric Encryption Padding (OAEP). Prints the successfully decrypted message.
+
+
+
+**To Run:**
+
+python rsa\_decryption.py
+
+
+
+**========================================================**
+
+
+
+##### **KEY LEARNING OUTCOMES**
+
+This assignment provided hands-on experience with: AES symmetric encryption (CBC mode). RSA OAEP asymmetric decryption. Implementing Hash Functions (SHA-256, MD5) for integrity. Secure methods for Password-Based Key Derivation. Working with data encoding formats: JSON and Base64. Understanding encryption data storage structure.
+
+
+
+**========================================================**
+
+
+
+##### **AUTHOR \& COURSE INFORMATION**
+
+
+
+Author: **Prince Patel**
+
 Course: CS2413 – Information Security
+
 Institution: University of New Brunswick
+
