@@ -1,212 +1,147 @@
-\# CS2413 – Cryptography Assignment 1
+CS2413 – Cryptography Assignment 1: Information Security
 
+This repository contains my completed solutions for Programming Assignment 1 from the course CS2413 (Information Security).
 
+The project demonstrates practical applications of symmetric encryption (AES), asymmetric decryption (RSA), and cryptographic hashing (SHA-256, MD5). All three assignments are implemented in Python, and professor-provided files are included for immediate execution and verification.
 
-This repository contains my solutions for Assignment 1 from the course CS2413 (Information Security).  
+🚀 Repository Contents & Setup
 
-All three questions are included in one place so anyone can run and learn from them.  
+Key Files
 
-Professor-provided files are also included.
+File Name
 
+Description
 
+Category
 
----
+encryption_system.py
 
+Solution for Question 1 (AES Encryption).
 
+Solution
 
-\## Files in this Repository
+hash_checker.py
 
+Solution for Question 2 (SHA-256 Hash Check).
 
+Solution
 
-encryption\_system.py  
+rsa_decryption.py
 
-hash\_checker.py  
+Solution for Question 3 (RSA OAEP Decryption).
 
-rsa\_decryption.py  
+Solution
 
+requirements.txt
 
+Python dependencies required to run the solutions.
 
-private\_key.pem  
+Config
 
-encrypted\_message.txt  
+private_key.pem
 
+Professor-provided file (used in Q2 and Q3).
 
+Resource
 
-Programming\_Assignment-1-Report.docx  
+encrypted_message.txt
 
+Professor-provided file (ciphertext for Q3).
 
+Resource
 
-requirements.txt  
+Programming_Assignment-1-Report.docx
 
-README.md  
+The formal assignment report.
 
+Documentation
 
+Installation
 
----
-
-
-
-\## Question 1 – AES Message Storage
-
-
-
-This program allows a user to store secret messages securely.
-
-
-
-It does the following:
-
-
-
-\- Creates an encryption key from the user’s password (SHA-256 or MD5)  
-
-\- Encrypts the message using AES in CBC mode  
-
-\- Uses a random IV for every encryption  
-
-\- Saves encrypted data into a JSON file  
-
-\- Adds a hash of the ciphertext to detect tampering  
-
-\- Allows the user to decrypt their message later  
-
-
-
-To run:
-
-python  encryption\_system.py
-
-
-
----
-
-
-
-\## Question 2 – SHA-256 Hash Checker
-
-
-
-This program reads the file private\_key.pem and calculates its SHA-256 hash.  
-
-It compares this hash to four multiple-choice options and prints which one matches.
-
-
-
-To run:
-
-
-
-python hash\_checker.py
-
----
-
-
-
-\## Question 3 – RSA OAEP Decryption
-
-
-
-This program decrypts a Base64-encoded encrypted message using the professor’s private key.
-
-
-
-It does the following:
-
-
-
-\- Loads private\_key.pem  
-
-\- Reads encrypted\_message.txt  
-
-\- Decodes the Base64 ciphertext  
-
-\- Decrypts it using RSA with OAEP padding  
-
-\- Prints the decrypted message  
-
-
-
-To run:
-
-
-
-python rsa\_decryption.py
-
----
-
-
-
-\## Included Professor Files
-
-
-
-private\_key.pem  
-
-encrypted\_message.txt  
-
-Programming\_Assignment-1-Report.docx  
-
-
-
-These files are included so that anyone can run the programs exactly like in the assignment.
-
-
-
----
-
-
-
-\## Installation
-
-
-
-Install required libraries:
-
-
+To run the programs, you must first install the required Python libraries:
 
 pip install -r requirements.txt
 
 
+💡 Assignment Solutions Overview
 
----
+Question 1: AES Message Storage
 
+This program, encryption_system.py, simulates a secure message storage system.
 
+It performs the following cryptographic steps:
 
-\## What I Learned
+Generates an encryption key from the user's password using a cryptographic hash function (SHA-256 or MD5).
 
+Encrypts the secret message using the Advanced Encryption Standard (AES) in Cipher Block Chaining (CBC) mode.
 
+Ensures security by using a random Initialization Vector (IV) for every encryption.
 
-\- AES encryption (CBC mode)  
+Saves the encrypted message and IV into a JSON file.
 
-\- RSA OAEP decryption  
+Adds a hash of the ciphertext to the file to detect any unauthorized tampering (data integrity check).
 
-\- Hash functions (SHA-256, MD5)  
+Allows the user to decrypt their message later using their password.
 
-\- Password-based key generation  
+To Run:
 
-\- How to check integrity with hashes  
-
-\- How to read and write files in Python  
-
-\- How to work with JSON and Base64  
-
-\- How real encryption systems store data  
-
+python encryption_system.py
 
 
----
+Question 2: SHA-256 Hash Checker
+
+The program, hash_checker.py, verifies the integrity of the provided private key file.
+
+It reads the private_key.pem file.
+
+Calculates the SHA-256 hash of its contents.
+
+Compares the calculated hash against four hardcoded multiple-choice options.
+
+Prints the matching option to confirm the file's authenticity.
+
+To Run:
+
+python hash_checker.py
 
 
+Question 3: RSA OAEP Decryption
 
-\## Author
+This program, rsa_decryption.py, uses asymmetric cryptography to recover a secret message.
+
+It loads the private key from private_key.pem.
+
+Reads the Base64-encoded ciphertext from encrypted_message.txt.
+
+Decodes the Base64 ciphertext back into its binary form.
+
+Decrypts the binary data using RSA with the recommended Optimal Asymmetric Encryption Padding (OAEP) scheme.
+
+Prints the successfully decrypted original secret message.
+
+To Run:
+
+python rsa_decryption.py
 
 
+📚 Key Learning Outcomes
 
-Prince Patel  
+This assignment provided hands-on experience with fundamental security concepts:
 
-University of New Brunswick  
+Deepened understanding of AES symmetric encryption (CBC mode).
 
-CS2413 – Information Security
+Practical application of RSA OAEP asymmetric decryption.
 
+Implementing and utilizing various Hash Functions (SHA-256, MD5) for integrity checking and key generation.
 
+Developing secure techniques for Password-Based Key Derivation.
 
+Working with common data encoding formats like JSON and Base64.
+
+Gaining insight into how real-world encryption systems structure and store data securely.
+
+🧑‍💻 Author & Course Information
+
+Author: Prince Patel
+Course: CS2413 – Information Security
+Institution: University of New Brunswick
